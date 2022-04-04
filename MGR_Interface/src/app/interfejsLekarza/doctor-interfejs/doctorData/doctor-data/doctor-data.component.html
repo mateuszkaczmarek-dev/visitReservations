@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div class="div1">
+    <button class="menuButton" routerLink="/DOCTOR/personalData">Dane Osobowe</button>
+    <button class="menuButton" >Sprawdź Wizytę</button>
+    <button class="menuButton">Wystaw Receptę</button>
+    <button class="menuButton">Dodaj Wizytę</button>
+</div>
+
+<body>
+    <form (ngSubmit)="AddDoctorPersonalData()">
+        <label class="msg">{{msg}}</label>
+        <label>Imię:</label>
+        <input *ngIf="_isblocked === true" name="name" type="text" placeholder="{{_name }}">
+        <input *ngIf="_isblocked === false" name="name" type="text" placeholder="Imię" [(ngModel)]="doctorData.name">
+        <label>Nazwisko:</label>
+        <input *ngIf="_isblocked === true" name="surname" type="text" placeholder="{{_surname }}" >
+        <input *ngIf="_isblocked === false" name="surname" type="text" placeholder="Nazwisko" [(ngModel)]="doctorData.surname">
+        <label>Specjalizacja:</label>
+        <input *ngIf="_isblocked === true" name="specialization" type="text" placeholder="{{_specialization }}" >
+        <input *ngIf="_isblocked === false" name="specialization" type="text" placeholder="Specjalizacja" [(ngModel)]="doctorData.specialization">
+        <label>Pwz:</label>
+        <input *ngIf="_isblocked === true" name="pwz" type="number" placeholder="{{_pwz}}" >
+        <input *ngIf="_isblocked === false" name="pwz" type="number" placeholder="Pwz" [(ngModel)]="doctorData.pwz">
+    
+        <button *ngIf="_isblocked === true" disabled='disabled' name="accept" id="accept" class="accept" >Zatwierdz</button>
+        <button *ngIf="_isblocked === false" name="accept" id="accept" class="accept" >Zatwierdź</button>
+    </form>
+    </body>

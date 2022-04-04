@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div class="div1">
+    <button class="menuButton" routerLink="/USER/personalData">Dane Osobowe</button>
+    <button class="menuButton" routerLink="/USER/userReservation">Zarezerwuj Wizytę</button>
+    <button class="menuButton">Historia Wizyt</button>
+</div>
+
+<body>
+    <form class="div2" (ngSubmit)="addRes()">
+
+        <label class="msg">{{msg}}</label>
+        <mat-form-field>
+            <input name="cal" matInput [matDatepicker]="myDatePicker" [(ngModel)]="_allDate" placeholder="Choose a date"  [matDatepickerFilter]="weekendFilter">
+            <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle> 
+            <mat-datepicker #myDatePicker></mat-datepicker>     
+        </mat-form-field>
+
+        <label>Wybierz specjalność</label><select name="spec"  [(ngModel)]="reservation.specialization" (ngModelChange)="onSelected()">
+            <option *ngFor="let s of _spec" [value]="s">
+                {{s}}
+            </option>  
+        </select>
+
+        <label>Wybierz lekarza</label><select name="doct" [(ngModel)]="reservation.doctorName" >
+            <option ></option>
+            <option *ngFor="let d of arrDoctor">
+                {{d.name + " " + d.surname}}
+            </option>
+        </select>
+        <label>Wybierz godzine</label><select name="time" [(ngModel)]="reservation.time">
+            <option *ngFor="let t of time">
+                {{t}}
+            </option>
+        </select>
+        <button class="reservationButton">Zarezerwuj</button>
+    </form>  
+    
+    <div class="div3" style="overflow-x:auto;">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Pesel</th>
+                    <th>Imie</th>
+                    <th>Nazwisko</th>
+                    <th>Dzien</th>
+                    <th>Godzina</th>
+                    <th>Lekarz</th>
+                    <th>Specjalizacja</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center"><button class="delete-button"><span class="glyphicon glyphicon-remove"></span>Usuń</button></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+

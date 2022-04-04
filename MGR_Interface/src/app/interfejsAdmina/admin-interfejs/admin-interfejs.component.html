@@ -1,0 +1,105 @@
+
+ 
+<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" >
+    
+
+
+<div>
+<div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With Email Address"  name="email" [(ngModel)]="email"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="findUserByEmailId()">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+
+<div class="container">
+<div class="container">
+    <style type="text/css">
+        
+        </style>
+    <div class="rowxd">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let k of user">
+            <td>{{k.id}}</td>
+            <td>{{k.username}}</td>
+            <td>{{k.password}}</td>
+            <td>{{k.email}}</td>
+            <td>{{k.role}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteUserById(k.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+          </tr>
+    </tbody>
+
+    </table>
+    </div>
+    
+</div>
+-->
+
+<!DOCTYPE html>
+<div class="container">
+    <div class="row">
+               <div id="custom-input">
+                                <div class="input">
+                                    <input type="text" class="search-query form-control" placeholder="Search With Email Address"  name="email" [(ngModel)]="email"/>
+                                    
+                                        <button class="btn-danger" type="button" (click)="findUserByEmailId()">
+                                            Szukaj
+                                        </button>
+                                    
+                                </div>
+                            </div>
+    </div>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Table Head Dark</title>
+</head>
+
+
+<body>
+    
+<div class="m-4">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let k of user">
+                <td>{{k.id}}</td>
+                <td>{{k.username}}</td>
+                <td>{{k.password}}</td>
+                <td>{{k.email}}</td>
+                <td>{{k.role}}</td>
+                <td class="text-center"><button class="delete-button" (click)="deleteUserById(k.id)"><span class="glyphicon glyphicon-remove"></span>Usuń</button></td>
+              </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

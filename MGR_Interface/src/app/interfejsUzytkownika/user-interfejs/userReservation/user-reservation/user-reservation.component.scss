@@ -1,0 +1,185 @@
+
+.menuButton{
+    margin: 0; padding: 0;
+    display: inline-block;
+    padding: 20px;
+    width: 33.333333%;
+    font-size: 18px;
+    font-weight: 500;
+    background: #aaa;
+    list-style-type:none;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    
+    
+}
+
+.reservationButton{
+    display: block;
+    background: #aaa;
+    height: 50px;
+    width: 30%;
+    margin-left: 16%;
+    padding: 0 10px;
+    margin-top: 10%;
+    font-size: 18px;
+    font-weight: 500;
+    color:black;
+    border-radius: 20px;
+}
+
+.delete-button {
+    display: block;
+    background: #aaa;
+    height: 20px;
+    width: 70%;
+    margin-left: 16%;
+    font-size: 13px;
+    font-weight: 500;
+    color:black;
+    border-radius: 3px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.msg{
+    color:red;
+}
+
+
+.div2 {
+    height: 620px;
+    width: 900px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 58%;
+    padding: 50px 35px;
+}
+select{
+    display: block;
+    background-color:rgba(77, 75, 75, 0.1);
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color:black;
+    border: none;
+    outline: none;
+    
+
+}
+
+input{
+    width:70%;
+    height: 5%;
+    font-size: large;
+}
+
+select{
+    width:60%;
+    height: 7%;
+    font-size: large;
+}
+
+
+label{
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+table { 
+    width: 50%; 
+    border-collapse: collapse;
+    margin-top:30%; 
+    margin-left: 25%;
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+  }
+  .div3{
+      
+      margin-top:30%;
+  }
+
+  .table{
+      margin-top:5%;
+  }
+  
+
+@media (max-width: 768px) {
+    div{
+        width: auto;
+        
+        
+    }
+    .div2 {
+        
+            height: auto;
+            width: auto;
+            margin-top: 10%;
+        
+        
+    }
+    select{
+        font-size: 14px;
+    }
+    label{
+        font-size: 14px;
+    }
+
+    
+    .reservationButton{
+        
+        width: auto;
+        height: auto;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    /* Force table to not be like tables anymore */
+
+    .div3 {
+        margin-top:120%;
+        
+    }
+
+
+    table{
+        
+        width: 100%;
+        margin-left: auto;
+        margin-top:100%;
+    }
+
+    .menuButton{
+        font-size: small;
+        text-align: center;
+    }
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+
+}
+
+

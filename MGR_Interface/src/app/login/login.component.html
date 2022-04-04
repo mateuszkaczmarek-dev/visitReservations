@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+    <form class="form">
+        <h3>Logowanie</h3>
+        <label for="username">Login:</label>
+        <input name="user" type="text" placeholder="Nazwa Użytkownika" id="username" [(ngModel)]="user.username">
+
+        <label for="password">Hasło:</label>
+        <input name="pass" type="password" placeholder="Hasło" id="password" [(ngModel)]="user.password">
+
+
+        <button name="log" id="submit_button" type="submit" (click)="login(user.username,user.password)">Zaloguj</button>
+        <small class="danger">{{msg}}</small>
+    </form>
+</body>
+</html>
+

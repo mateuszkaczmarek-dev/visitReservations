@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<div class="div1">
+    <button class="menuButton" routerLink="/USER/personalData">Dane Osobowe</button>
+    <button class="menuButton" routerLink="/USER/userReservation">Zarezerwuj Wizytę</button>
+    <button class="menuButton">Historia Wizyt</button>
+</div>
+
+
+<body>
+<form (ngSubmit)="AddUserPersonalData()">
+    <label class="msg">{{msg}}</label>
+    <label>PESEL:</label>
+    <input *ngIf="_isblocked === true" name="pesel" type="text"  placeholder="{{_pesel }}"  [(ngModel)]="userData.pesel">
+    <input *ngIf="_isblocked === false" class="pesel" id="pesel" name="pesel" type="text"  placeholder="PESEL" pattern="[0-9]{11}" [(ngModel)]="userData.pesel">
+    <label>Imię:</label>
+    <input *ngIf="_isblocked === true" name="name" type="text" placeholder="{{_name}}"  [(ngModel)]="userData.name">
+    <input *ngIf="_isblocked === false" name="name" type="text" placeholder="Imię"  [(ngModel)]="userData.name">
+    <label>Nazwisko:</label>
+    <input *ngIf="_isblocked === true" name="surname" type="text" placeholder="{{_surname}}" [(ngModel)]="userData.surname">
+    <input *ngIf="_isblocked === false" name="surname" type="text" placeholder="Nazwisko" [(ngModel)]="userData.surname">
+    <label>Adres:</label>
+    <input *ngIf="_isblocked === true" name="adress" type="text" placeholder="{{_adress}}"  [(ngModel)]="userData.adress">
+    <input *ngIf="_isblocked === false" name="adress" type="text" placeholder="Adres"  [(ngModel)]="userData.adress">
+    <label>Numer telefonu:</label>
+    <input *ngIf="_isblocked === true" name="phone" type="text" placeholder="{{_phone}}"  [(ngModel)]="userData.phone">
+    <input *ngIf="_isblocked === false" name="phone" type="text" placeholder="Numer telefonu" [(ngModel)]="userData.phone">
+    <label>Data urodzenia:</label>
+    <input *ngIf="_isblocked === true" name="date" type="text" placeholder="{{_date}}"  [(ngModel)]="userData.date">
+    <input *ngIf="_isblocked === false" name="date" type="date" placeholder="Data urodzenia"  [(ngModel)]="userData.date">
+
+    <button *ngIf="_isblocked === true" disabled='disabled' name="accept" id="accept" class="accept" >Zatwierdz</button>
+    <button *ngIf="_isblocked === false" name="accept" id="accept" class="accept" >Zatwierdź</button>
+</form>
+</body>
